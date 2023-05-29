@@ -3,6 +3,7 @@ package com.orangehrm.testcases;
 import com.orangehrm.driverscript.TestBase;
 import com.orangehrm.pages.OrangeHRMPIMPage;
 import com.orangehrm.pages.OrangeHRMPersonalDetailsPage;
+import com.orangehrm.utilities.GenerateRandomNumber;
 import com.orangehrm.utilities.ReadDataFromHRMTestDataProp;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -21,7 +22,7 @@ public class OrangeHRMPIMTest extends TestBase {
         pim.enterFirstName(ReadDataFromHRMTestDataProp.getPropData("firstName"));
         pim.enterMiddleName(ReadDataFromHRMTestDataProp.getPropData("middleName"));
         pim.enterLastName(ReadDataFromHRMTestDataProp.getPropData("lastName"));
-      //  pim.enterEmployeeId("02");
+        pim.enterEmployeeId(GenerateRandomNumber.getRandomNumber());
         pim.clicksvbtn();
     }
 }
